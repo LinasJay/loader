@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway' , sans-serif;
+	text-align: center;
+}
+
+body {
+	background-color: #2f3536;
+	height: 100vh;
+}
+
+
+/* Background image
+================ */
+
+#bg-img{
+	background-image: url(../img/background4.png); 
+	background-size: cover;
+	background-position: center;
+ 	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+ 	z-index: 1;
+ 	height: 100vh;
+ 	animation: fadeImage 10s forwards;
+}
+
+
+
+
+/* Hero-body
+================ */
+
+.home-body {
+	color: white;
+	font-size: 35px;
+	padding-top: 180px;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 35px;
+}
+
+/* Navigation items
+================ */
+
+nav {
+	padding-top: 200px;
+	word-spacing: 150px;
+}
+
+nav li {
+	display: inline-flex;
+	text-transform: uppercase;
+	flex-wrap: wrap;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	transition: text-shadow .5s ease;
+	transition: transform .5s ease;
+}
+
+li a:hover {
+	text-shadow: 0 0 3px;
+	cursor: pointer;
+	transform: scale(1.1)
+}
+
+/* Lines
+================ */
+
+.line-top {
+	display: flex;
+	border-bottom: 1px solid white;
+	box-shadow: 0px 2px 0 white;
+	margin: auto;
+	width: 550px;
+}
+
+.line-bottom {
+	border-bottom: 1px solid white;
+	box-shadow: 0px 2px 0 white;
+	margin: auto;
+	width: 700px;
+}
+
+
+/* Loader
+================ */
+
+#loader-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #283031;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: 3px solid #fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 25%;}
+  50% { height: 100%;}
+  75% { height: 75%;}
+  100% { height: 0%;}
+}
+
+
+/* Adaptive screen size
+================ */
+
+
+@media (max-width: 730px) {
+	.home-body, h2 {
+		color: white;
+		font-size: 90%;
+	}
+
+	li a {
+		font-weight: 300;
+		font-size: 60%;
+	}
+
+	.line-top {
+		width: 70%;
+		margin: auto;
+	}
+	.line-bottom {
+		width: 90%;
+		margin: auto;
+	}
+
+	nav {
+		word-spacing: 70px;
+	}
+
+	li a:hover {
+	text-shadow: 0 0 3px;
+	cursor: pointer;
+	font-size: 70%;
+	}
+}
+
+/* Fade in
+================ */
+
+
+.home-body, nav, .line-bottom {
+	animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+	from {
+	opacity: 0;
+	transform: translateY(-4em);
+	}
+
+	to {
+	opacity: 1;
+	transform: translateY(0);
+	}
+}
+
+@keyframes fadeImage {
+	from {
+	opacity: 0;
+	}
+
+	to {
+	opacity: 1;
+	}
+}
+

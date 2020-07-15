@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Linas</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/Line_animations.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<div id="loader-bg">
+	<div class="loader"><div class="loader-inner"></div></div>
+</div>
+
+<div id="bg-img">
+	<section class="home-body">
+		 <h1> LINAS JANKAUSKAS </h1>
+		 <div class="line-top"></div>
+		 <h2> {Front - end web developer} </h2>
+	</section>
+
+<nav>
+	<ul>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+<div class="line-bottom"></div>
+</div>
+
+
+	<script>
+	 	document.onreadystatechange = function () {
+  		var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('bg-img').style.visibility="hidden";
+       document.getElementById('loader-bg').style.visibility="visible";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('loader-bg').style.visibility="hidden";
+         document.getElementById('bg-img').style.visibility="visible";
+      },1000);
+  }
+}
+	</script>
+
+</body>
+</html>
